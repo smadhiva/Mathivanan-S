@@ -59,3 +59,37 @@
       1px 1px 3px rgba(0, 0, 0, 0.8);
   }
 }
+
+@media (max-width: 768px) {
+  .intro-text {
+    font-size: 1.2rem;
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  .intro-text h1 {
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+  }
+
+  .blink-slow {
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text {
+    font-size: 1rem;
+    top: 45%;
+    padding: 0 10px;
+  }
+
+  .intro-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .blink-slow {
+    font-size: 0.9rem;
+  }
+}

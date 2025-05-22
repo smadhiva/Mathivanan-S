@@ -1,0 +1,19 @@
+/* Projects.css */
+.projects-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Adjust padding and height on small screens */
+@media (max-width: 600px) {
+  .projects-container {
+    height: auto;
+    padding: 10px;
+  }
+}

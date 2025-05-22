@@ -59,10 +59,7 @@ const Contact = () => {
               className="contact-form"
             >
               <input type="hidden" name="_captcha" value="false" />
-              {/* optional, to disable captcha */}
-              {/* <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" /> */}
-              {/* optional, redirect to thank-you page */}
-
+            
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" placeholder="Your Name" required />
 

@@ -51,8 +51,17 @@ function Scene() {
 }
 
 export default function ButterflyCanvas() {
+  const isMobile = window.innerWidth < 768;
   return (
-    <Canvas style={{ width: 200, height: 200 }}>
+    
+    <Canvas style={{
+        width: '100%',      // full width on small screens
+        maxWidth: 200,      // max width for larger screens
+        height: 200,        // fixed height, can adjust if needed
+        touchAction: 'none', 
+        marginLeft:isMobile?'30%':'0px',
+        // better touch behavior on mobile
+      }}>
       <Scene />
     </Canvas>
   );

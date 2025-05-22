@@ -10,7 +10,7 @@ const skillGroups = {
     'HTML', 'CSS', 'JavaScript', 'React', 'Angular', 'Svelte', 'Tailwind CSS', 'Bootstrap', 'Webpack', 'Next.js',
   ],
   Backend: [
-    'Node.js', 'Express', 'SQL', 'MongoDB', 'Python', 'Django', 'Flask','GraphQL', 'REST API', 'Java', ,
+    'Node.js', 'Express', 'SQL', 'MongoDB', 'Python', 'Django', 'Flask','GraphQL', 'REST API', 'Java',
   ],
   ML: [
     'Machine Learning', 'AI', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Keras', 'OpenCV', 'NLP', 'Computer Vision', 'Reinforcement Learning', 'Data Science', 'Pandas', 'NumPy',
@@ -45,6 +45,7 @@ function Asteroid({ skill, angle, radius, setHoveredSkill }) {
   });
 
   const bind = useDrag(({ down, movement: [mx, my] }) => {
+    if (isTouch) return; 
     setIsDragging(down);
     if (down) {
       const factor = 0.01;
@@ -100,8 +101,9 @@ export default function SkillOrbit() {
   let index = 0;
   const totalSkills = Object.values(skillGroups).reduce((acc, arr) => acc + arr.length, 0);
   
-  const baseRadius = 5;
-const orbitSpacing = 2;
+const isMobile = window.innerWidth < 768;
+const baseRadius = isMobile ? 7 : 5;
+const orbitSpacing = isMobile ? 3 : 2;
 
 const skillData = Object.entries(skillGroups).flatMap(([group, skills], groupIdx) => {
   const radius = baseRadius + groupIdx * orbitSpacing;
@@ -117,6 +119,7 @@ const skillData = Object.entries(skillGroups).flatMap(([group, skills], groupIdx
     <div style={{ width: '100vw', height: '100vh', background: 'black' }}>
       <div style={{
   position: 'fixed',
+  touchAction: 'none',
   top: '80px',
   width: '100%',
   textAlign: 'center',
@@ -144,7 +147,14 @@ const skillData = Object.entries(skillGroups).flatMap(([group, skills], groupIdx
         </p>
       </div>
 
-      <Canvas shadows camera={{ position: [0, 3, 10], fov: 60 }}>
+    <Canvas
+  shadows
+  camera={{
+    position: window.innerWidth < 768 ? [0, 3, 14] : [0, 3, 10],
+    fov: window.innerWidth < 768 ? 75 : 60,
+  }}
+>
+
         <ambientLight intensity={0.7} />
         <pointLight position={[10, 10, 10]} intensity={5} />
         <directionalLight position={[5, 10, 7]} intensity={1} castShadow />
@@ -195,6 +205,9 @@ const skillData = Object.entries(skillGroups).flatMap(([group, skills], groupIdx
     textShadow: '0 0 6px #7df9ff',
     animation: 'floatGlow 3s ease-in-out infinite',
     fontFamily: 'Orbitron, sans-serif',
+    bottom: window.innerWidth < 768 ? 60 : 120,
+  fontSize: window.innerWidth < 768 ? '1.1rem' : '1.4rem',
+  padding: window.innerWidth < 768 ? '8px 20px' : '12px 28px',
   }}>
     <style>
       {`

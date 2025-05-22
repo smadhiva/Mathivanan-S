@@ -83,3 +83,48 @@
     box-shadow: 0 0 20px #a29bfe, 0 0 30px #81ecec;
   }
 }
+
+@media (max-width: 1024px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .about-text {
+    max-width: 90%;
+    text-align: center;
+    border-left: none;
+    border-top: 5px solid #9b59b6;
+  }
+
+  .about-3d {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-text {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .about-3d {
+    height: 300px;
+  }
+
+  .download-btn {
+    padding: 8px 16px;
+    font-size: 0.95rem;
+  }
+}

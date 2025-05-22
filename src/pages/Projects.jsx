@@ -1,6 +1,6 @@
 import React from 'react';
 import Projects3D from '../components/Projects3D'; // Make sure this path is correct
-
+import '../styles/Projects.css'
 const projects = [
   {
     title: "🏙️ Smart City Backend",
@@ -60,7 +60,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+    <div className="projects-container">
       <Projects3D projects={projects} />
     </div>
   );

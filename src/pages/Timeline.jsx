@@ -70,7 +70,7 @@ export default function Timeline() {
   return (
     <div className="timeline-wrapper">
       <Starfield/>
-      <h1 className="timeline-title">Project Timeline</h1>
+      <h1 className="timeline-title" >Project Timeline</h1>
       <Time projects={projects} />
     </div>
   );
