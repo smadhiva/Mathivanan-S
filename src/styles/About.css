@@ -2,7 +2,7 @@
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #0d0c1d, #1b133c);
   color: #f0e6ff;
-  overflow: hidden;
+  overflow-x: hidden; /* Prevent horizontal scroll */
   margin-bottom: 10%;
 }
 
@@ -14,6 +14,8 @@
   max-width: 1400px;
   margin: 0 auto;
   gap: 3rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .about-text {
@@ -28,6 +30,7 @@
   backdrop-filter: blur(8px);
   font-family: 'Cinzel', serif;
   color: #f0e6ff;
+  word-break: break-word;
 }
 
 .about-text h2 {
@@ -84,15 +87,17 @@
   }
 }
 
+/* Tablets and below */
 @media (max-width: 1024px) {
   .about-container {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+    padding: 0 1.5rem;
   }
 
   .about-text {
-    max-width: 90%;
+    max-width: 95%;
     text-align: center;
     border-left: none;
     border-top: 5px solid #9b59b6;
@@ -104,16 +109,20 @@
   }
 }
 
+/* Phones */
 @media (max-width: 600px) {
-   .about-container {
+  .about-container {
     flex-direction: column;
     align-items: center;
-    margin-left: 0%;
+    padding: 0 1rem;
+    margin: 0 auto;
   }
 
   .about-text {
     font-size: 1rem;
     padding: 1.5rem;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .about-text h2 {
@@ -126,6 +135,7 @@
   }
 
   .about-3d {
+    width: 100%;
     height: 300px;
   }
 
