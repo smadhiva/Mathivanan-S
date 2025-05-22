@@ -27,7 +27,7 @@ const AboutText = () => (
     </p>
     <p>
       <a href="/Resume.pdf" download className="download-btn">
-        📄 Download My Resume
+       Download My Resume
       </a>
     </p>
   </motion.div>
