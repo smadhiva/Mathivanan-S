@@ -48,7 +48,7 @@ const About = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <Canvas camera={{ position: [30, -10, 150], fov: 50 }}>
+          <Canvas camera={{ position: [30, 80, 150], fov: 80 }}>
   <ambientLight intensity={0.8} />
   <directionalLight position={[0, 2, 5]} intensity={1.2} />
   <OrbitControls 
