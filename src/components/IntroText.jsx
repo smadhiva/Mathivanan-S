@@ -1,5 +1,5 @@
 // src/components/IntroText.jsx
-import '../styles/IntroText.css';
+import '../styles/Introtext.css';
 
 const IntroText = () => (
   <div className="intro-text">
