@@ -1,32 +1,12 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import emailjs from '@emailjs/browser';
 import '../styles/Contact.css';
 import Starfeild from '../components/Starfield';
 
 const Contact = () => {
-  const form = useRef();
-  const [sent, setSent] = useState(false);
-
   const particlesInit = async (main) => {
     await loadFull(main);
-  };
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm(
-     'service_tndndby',
-      'template_lqsqrsg',    // e.g., template_yyy456
-      form.current,
-      'Gl_fW2a-fLT1AX9O7'      // e.g., QVabc12345xyz
-    ).then(() => {
-        setSent(true);
-        form.current.reset();
-      }, (error) => {
-        console.error("Email sending error:", error.text);
-      });
   };
 
   return (
@@ -73,18 +53,26 @@ const Contact = () => {
 
         <div className="contact-right">
           <div className="contact-card">
-            <form ref={form} className="contact-form" onSubmit={sendEmail}>
+            <form 
+              action="https://formsubmit.co/smadhivanan1234@gmail.com" 
+              method="POST"
+              className="contact-form"
+            >
+              <input type="hidden" name="_captcha" value="false" />
+              {/* optional, to disable captcha */}
+              {/* <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" /> */}
+              {/* optional, redirect to thank-you page */}
+
               <label htmlFor="name">Name</label>
-              <input type="text" name="user_name" id="name" placeholder="Your Name" required />
+              <input type="text" name="name" id="name" placeholder="Your Name" required />
 
               <label htmlFor="email">Email</label>
-              <input type="email" name="user_email" id="email" placeholder="you@example.com" required />
+              <input type="email" name="email" id="email" placeholder="you@example.com" required />
 
               <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="5" placeholder="Write your message..." required />
+              <textarea name="message" id="message" rows="5" placeholder="Write your message..." required></textarea>
 
               <button type="submit">Send Message</button>
-              {sent && <p style={{ color: '#7de5ff', marginTop: '10px' }}>✅ Message sent successfully!</p>}
             </form>
 
             <div className="contact-info">
