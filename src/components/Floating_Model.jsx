@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
 const Floating_Model = () => {
-   const gltf = useGLTF('../../public/models/crystal_planet.glb');
+   const gltf = useGLTF('/models/crystal_planet.glb');
   const ref = useRef();
 
   useEffect(() => {
