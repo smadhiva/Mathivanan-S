@@ -1,0 +1,13 @@
+.home-container {
+  display: flex;
+  flex-direction: column;  /* stack items vertically */
+  justify-content: center; /* center vertically */
+  align-items: center;     /* center horizontally */
+  height: 100vh;           /* take full viewport height */
+  width: 100%;
+  overflow: hidden;        /* optional, if you want to hide overflow */
+  position: relative;      /* if Starfield or UniverseModel uses absolute positioning */
+  background-color: black; /* or whatever background you want */
+}
+
+

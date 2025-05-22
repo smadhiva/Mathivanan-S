@@ -1,0 +1,61 @@
+.intro-text {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  user-select: none;
+  z-index: 2;
+  font-family: 'Cinzel', serif;
+
+  /* Crisp white base + enhanced color glow */
+  color: #ffffff;
+  text-shadow:
+    0 0 8px #b890ff,
+    0 0 16px #d4b4ff,
+    0 0 24px #e2c6ff,
+    1px 1px 2px rgba(0, 0, 0, 0.7);
+
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  animation: glowPulse 6s ease-in-out infinite;
+}
+
+.blink-slow {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  font-family: 'Cinzel', serif;
+
+  color: #e6e6ff;
+  text-shadow:
+    0 0 5px rgba(200, 180, 255, 0.8),
+    0 0 10px rgba(170, 170, 255, 0.6),
+    1px 1px 1px rgba(0, 0, 0, 0.6);
+
+  animation: glowPulse 8s ease-in-out infinite;
+}
+
+/* Shared glowing pulse effect */
+@keyframes glowPulse {
+  0%, 100% {
+    text-shadow:
+      0 0 8px #b890ff,
+      0 0 16px #d4b4ff,
+      0 0 24px #e2c6ff,
+      1px 1px 2px rgba(0, 0, 0, 0.6);
+  }
+  50% {
+    text-shadow:
+      0 0 12px #c9a0ff,
+      0 0 20px #e5ceff,
+      0 0 30px #f0dbff,
+      1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+}

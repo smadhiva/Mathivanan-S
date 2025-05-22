@@ -1,0 +1,61 @@
+/* Sparkle on click */
+.sparkle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #ffffff, #cc80ff, #7f00ff);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: sparkleAnimation 1s ease-out forwards;
+  box-shadow:
+    0 0 6px #fff,
+    0 0 12px #e0b3ff,
+    0 0 18px #c966ff,
+    0 0 25px #a64dff;
+  transform: rotate(calc(360deg * var(--r)));
+}
+
+/* Sparkle animation */
+@keyframes sparkleAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.8) rotate(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.5) translateY(-15px) rotate(360deg);
+  }
+}
+
+/* Magical trail on hover */
+.magic-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e6ccff, #b266ff);
+  pointer-events: none;
+  z-index: 9999;
+  animation: trailGlow 1.2s ease-out forwards;
+  box-shadow:
+    0 0 4px #e6ccff,
+    0 0 8px #b266ff,
+    0 0 12px #9933ff,
+    0 0 16px #8000ff;
+}
+
+/* Magic trail animation */
+@keyframes trailGlow {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
