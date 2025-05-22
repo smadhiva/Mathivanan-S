@@ -17,7 +17,7 @@ const AboutText = () => (
       Hello! I'm <strong>Mathivanan S</strong>, a passionate AI and full-stack developer driven by curiosity and creativity.
     </p>
     <p>
-      I'm currently pursuing B.Tech in CSE (Artificial Intelligence) and interned at <strong>Brainwave Matrix Solutions</strong>, where I’m working on projects like fake news detection and generative AI applications.
+      I'm currently pursuing B.Tech in CSE (Artificial Intelligence).
     </p>
     <p>
       I enjoy building intelligent systems, exploring the world of large language models, and crafting meaningful user experiences that blend technology with purpose.
