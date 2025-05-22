@@ -3,6 +3,7 @@
   background: linear-gradient(135deg, #0d0c1d, #1b133c);
   color: #f0e6ff;
   overflow: hidden;
+  margin-bottom: 10%;
 }
 
 .about-container {
@@ -52,4 +53,33 @@
   box-shadow: 0 0 40px rgba(155, 89, 182, 0.4);
   overflow: hidden;
   background: radial-gradient(circle at center, #281f41 0%, #0d0c1d 100%);
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #8e44ad, #3498db);
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(173, 216, 230, 0.5);
+  transition: all 0.3s ease-in-out;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #9b59b6, #2980b9);
+  box-shadow: 0 0 16px #a29bfe, 0 0 24px #81ecec;
+  transform: scale(1.05);
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px #81ecec;
+  }
+  100% {
+    box-shadow: 0 0 20px #a29bfe, 0 0 30px #81ecec;
+  }
 }

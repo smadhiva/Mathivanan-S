@@ -5,7 +5,6 @@ import '../styles/About.css';
 import Floating_Model from '../components/Floating_Model';
 import Starfield from '../components/Starfield';
 // Text block
-
 const AboutText = () => (
   <motion.div
     className="about-text"
@@ -26,6 +25,11 @@ const AboutText = () => (
     <p>
       When I’m not coding, you’ll find me diving into experimenting with generative art, or learning new ways to make tech more human.
     </p>
+    <p>
+      <a href="/Resume.pdf" download className="download-btn">
+        📄 Download My Resume
+      </a>
+    </p>
   </motion.div>
 );
 
@@ -44,7 +48,7 @@ const About = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
         >
-          <Canvas camera={{ position: [0, 1.5, 10], fov: 45 }}>
+          <Canvas camera={{ position: [0, -20, 150], fov: 50 }}>
   <ambientLight intensity={0.8} />
   <directionalLight position={[0, 2, 5]} intensity={1.2} />
   <OrbitControls 
