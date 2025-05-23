@@ -123,7 +123,7 @@ const skillData = Object.entries(skillGroups).flatMap(([group, skills], groupIdx
   top: '80px',
   width: '100%',
   textAlign: 'center',
-  zIndex: 1000,
+  zIndex: 600,
   color: '#00e5ff',
   fontFamily: 'Orbitron, sans-serif',
   pointerEvents: 'none',
