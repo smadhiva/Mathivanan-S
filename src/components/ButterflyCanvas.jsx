@@ -60,6 +60,7 @@ export default function ButterflyCanvas() {
         height: 200,        // fixed height, can adjust if needed
         touchAction: 'none', 
         marginLeft:isMobile?'30%':'0px',
+        zIndex:1,
         // better touch behavior on mobile
       }}>
       <Scene />

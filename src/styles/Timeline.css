@@ -35,7 +35,7 @@
     0 0 25px rgba(84, 117, 255, 0.4),
     inset 0 0 10px rgba(56, 80, 255, 0.35);
   padding: 25px 28px;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(12px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: default;
@@ -45,6 +45,7 @@
   min-height: 240px;
   color: #dde6ff;
   border: 1px solid rgba(100, 130, 255, 0.15);
+  z-index: 20;
 }
 
 /* Hover effect */
@@ -55,7 +56,8 @@
     inset 0 0 20px #4f74ffdd,
     0 10px 15px #2a4fff88;
   border-color: #739cff;
-  z-index: 10;
+  z-index: 100;
+   backdrop-filter: blur(100px);
 }
 
 /* Card title */
