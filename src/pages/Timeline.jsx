@@ -71,7 +71,7 @@ const projects = [
 export default function Help() {
   return (
     <div className="help-container">
-      <h1 className="help-title">My Magical Projects Timeline</h1>
+      <h1 className="help-title">My Projects Timeline</h1>
       <Times projects={projects} />
       <div className="butterfly-container butterfly-1">
   <Butterfly />
