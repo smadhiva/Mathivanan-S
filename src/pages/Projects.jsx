@@ -41,7 +41,7 @@ const projects = [
   {
     title: "🧮 Hybrid Processor",
     description: "Experimental architecture combining traditional and hybrid logic processing.",
-    tech: "C / Verilog (please confirm)",
+    tech: "Designing the Processor",
     link: "https://github.com/smadhiva/Hybrid-Processor",
   },
   {
